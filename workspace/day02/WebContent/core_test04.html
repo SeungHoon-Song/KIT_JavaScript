@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math를 이용한 구구단 연습</title>
+</head>
+<body>
+	<h3>Math를 이용한 구구단 연습</h3>
+	<hr>
+</body>
+<script>
+	/* 
+		Math.floor(Math.random() * n) : 0 ~ n-1의 난수
+	 */
+	function getRandomInt() {
+		return {
+			num1 : Math.floor(Math.random() * 9) + 1,
+			num2 : Math.floor(Math.random() * 9) + 1
+		};
+
+	}
+
+	//n * m 정답은 ?
+	//사용자가 입력한 값과 정답 비교
+	//정답, 오답 시 각각 알맞는 메세지 출력
+	var nums = getRandomInt();
+	var q = nums.num1 + " * " + nums['num2'];
+	var answer = eval(q);
+	var msg = "";
+
+	var myAnswer = prompt(q + " 값은 얼마일까요?", 0);
+
+	if (myAnswer == null) {
+		msg = "연습 종료";
+	}else{
+		msg = answer == myAnswer ? "정답!" : "오답..";
+		}
+		msg += "<br>" + q + " = " + "<strong>" + answer + "</strong>";
+	
+		document.write(msg);
+
+	/* var n = Math.floor(Math.random() * 10 + 1);
+	var m = Math.floor(Math.random() * 10 + 1); 
+	var answer = prompt(n+" * "+m+" 정답은 ?");
+	
+	if(answer==n*m){
+		alert("정답입니다!");
+		document.write(n*m + "는 정답!");
+	}else{
+		alert("오답입니다... 다시 문제를 제출합니다.");
+		history.go(0);
+	} */
+</script>
+</html>
