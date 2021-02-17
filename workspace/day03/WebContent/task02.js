@@ -15,20 +15,23 @@ function activeEnter(){
 	}
 }
 
-var flag = false;
-var text = document.getElementById("currentText");
-var img = document.getElementById("currentImg");
+var check = false;
+var policeCnt = 0;
+
 
 SuperCar.prototype.pw = prompt("자동차 초기 비밀번호 입력");
+
+const result = document.getElementById("result");
+
 SuperCar.showInput = function(){
-	if(!flag){
+	if(!check){
 		//시동을 켤 수 있는 상태
-		input.style.visibility  = "visible";
-		SuperCar.engineStart();
+		//input태그 visible
+		const inputTag = document.getElementById("pw");
+		inputTag.style.visibility  = "visible";
 	}else{
 		//시동이 이미 켜져있는 상태
-		input.style.visibility  = "hidden";
-		text.innerHTML = "이미 켜져 있습니다.";
+		result.innerHTML = "이미 켜져 있습니다.";
 	}
 }
 
@@ -36,33 +39,44 @@ SuperCar.showInput = function(){
 //SuperCar.engineStart()
 
 SuperCar.engineStart = function(){
+	const img = document.getElementById("stat");
+	const inputTag = document.getElementById("pw");
+	
+	var pw = inputTag.value;
+	
 	//비밀번호 검사 (SuperCar.prototype.pw : 초기비밀번호)
-	//연속 3회 오류 시 경찰 출동
-	var pw = document.getElementById("inputPw").value;
-	var cntPw=0;
-	if(pw != SuperCar.prototype.pw){
-		cntPw++;
-		currentText.innerHTML = "비밀번호 오류 : "+cntPw;
-		if(cntPw==3){
-			alert("경찰 출동중");
-			currentText.innerHTML = "경찰 출동";
-			img.src = "police.png";
-		}
+	if(SuperCar.prototype.pw == pw){
+		policeCnt = 0;
+		img.src = "시동켜기.gif";
+		inputTag.value = "비밀번호 입력";
+		inputTag.style.visibility = "hidden";
+		result.innerHTML = "시동 켜짐";
+		check = true;
 	}else{
-		
-		cntPw=0;
+		//연속 3회 오류 시 경찰 출동
+		policeCnt++;
+		if(policeCnt == 3){
+		img.src = "경찰.png";
+		document.getElementById("on").style.display = "none";
+		document.getElementById("off").style.display = "none";
+		inputTag.style.display = "none";
+		result.innerHTML = "경찰 출동";
+		}else{
+		result.innerHTML = "비밀번호 오류 : "+policeCnt+"회";
+		}
 	}
+	
 }
 
 SuperCar.engineStop = function(){
-	/*if(){
+	if(check){
 		//시동을 끌 수 있는 상태
-		
+		const img = document.getElementById("stat");
+		img.src = "시동끄기.gif";
+		result.innerHTML = "시동 꺼짐";
+		check = false;
 	}else{
 		//시동이 이미 꺼져있는 상태
-	}*/
-}
-
-SuperCar.reset = function(){
-	history.go(0);
+		result.innerHTML = "이미 시동이 꺼져있습니다.";
+	}
 }
