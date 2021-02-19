@@ -11,6 +11,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+	<style>
+		label{
+		display:inline-block;
+		width: 49%;
+		}
+		#signuptext {
+	 	margin: 0 auto;
+	 	width: 50%;
+		}
+	</style>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
 
@@ -39,32 +49,46 @@
 				</div>
 
 			<!-- Main -->
-			<div id="main" class="container"  style = "text-align:center;">
-
+			<div id="main" class="container">
 					<!-- Join -->
 		
-				<!-- #은 백엔드 개발자가 작업해야 할 업무이다. ex) action="#" -->
+				<div id="signuptext">
 					<label for="email">E-mail</label>
+				</div>
 				<form method="post" action="#" id="subscribe">
 		
 							<input type="email" style="color:black" class="text" name="email" id="email" value="" placeholder="abc@gmail.com"  />
-							<a href="#" class="button">Check</a>
-							
 				</form>
 				
-					<label for="pw">Password</label><br> 
-				<form method="post" action="#" id="subscribe">
+				
+				
+				<div id="signuptext">
+					<label for="pw">Password</label>
+					<label for="confirmpw">Confirm Password</label>
+				<form method="post" action="#" id="subscribe2">
 							<input type="password" style="color:black" class="text"	name="pw" id="pw" value=""/>
 				</form>
+				<form method="post" action="#" id="subscribe2">
+							<input type="password" style="color:black" class="text"	name="confirmpw" id="confirmpw" value=""/>
+				</form>
+				</div>
 				
-				<label for="name">Name</label><br> 
+				
+				
+				
+				<div id="signuptext">
+				<label for="name">Name</label>
+				</div>
 				<form method="post" action="#" id="subscribe">
 							<input type="text" style="color:black" class="text"	name="name" id="name" value=""/>
 				</form>
 				
-				<label for="phone">Phone Number</label><br> 
+				<div id="signuptext">
+				<label for="phone">Phone Number</label>
+				</div>
+				
 				<form method="post" action="#" id="subscribe">
-							<input type="text" style="color:black" class="text"	name="phone" id="phone" value=""/>
+							<input type="tel" style="color:black" class="text"	name="phone" id="phone" value=""/>
 				</form>
 				
 					<form method="post" action="#">
@@ -182,8 +206,8 @@
 					
 					<ul class="actions">
 							<li style="margin: 0 auto;">
-								<input type="submit" value="Finish" class="primary" />
-								<input type="reset" value="Reset" />
+								<input type="submit" value="CREATE" class="primary" />
+								<input type="reset" value="RESET" />
 							</li>
 						</ul>
 						
