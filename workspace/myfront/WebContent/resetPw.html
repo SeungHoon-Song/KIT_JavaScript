@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>TestLogin</title>
+		<title>Reset Password</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -50,32 +50,29 @@
 
 			<!-- Main -->
 				<div id="main" class="container">
-				<p style="text-align: center; font-size:24px; font-weight: bold;">Forgot your password?</p>
-				<p style="text-align: center;">Please enter the e-mail address you use to log in, 
-				and we’ll send you a link to reset your password.</p>
+				<p style="text-align: center; font-size:24px; font-weight: bold;">Reset your password</p>
+				<p style="text-align: center;">Please enter a new password, you will be automatically redirected to your account once it has been reset.</p>
 
-						<!-- Login -->	
-						
-				<!-- <label for="email">Email</label><br>  -->
-				<div id="membertext">
-					<label for="email">E-mail</label>
-				</div>
-				<form method="post" action="#" id="subscribe">
-							<input type="email" style="color:black" class="text"	name="email" id="email" value=""/>
-				</form>
-				<br>
 				
-				<form method="post" action="#" style="text-align: center;">
-							<a href="login.html" style="font-size: 0.7rem;">Already a member? Log in here</a>
-							
-							<!-- <a href="mailto:s10269@naver.com?subject=Forgot%20
-							your%20password?&body=본문%20테스트중" target="_top">send mail!</a> -->
+		
+				<div id="membertext">
+					<label for="pw">Password</label>
+				</div>
+				<form method="post" action="#" id="subscribe">	<!-- subs3 width -->
+				
+				
+				<input id="pw" type="password" style="color:black; display: inline-block; width: 93%;" class="text" name="pw" value="">
+              <span toggle="#pw" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+
+				
+			
+
+				</form>
 					<ul class="actions">
 							<li style="margin: 0 auto;">
 								<input type="button" value="RESET PASSWORD" />
 							</li>
 						</ul>
-				</form>
 					</div>
 
 
@@ -89,5 +86,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/resetPw.js"></script>
 	</body>
 </html>

@@ -2239,6 +2239,14 @@ input, select, textarea {
 		margin: 0em auto;
 		
 	}
+	
+	#resetPwF {
+		position: relative;
+		width: 50%;
+		border: 2px solid #5D6261;
+		margin: 0em auto;
+		
+	}
 		#subscribe .text {
 			-webkit-appearance: none;
 			display: block;
@@ -2270,6 +2278,23 @@ input, select, textarea {
 			color: #fff;
 			outline: none;
 		}
+		
+		#resetPwF .text {
+			-webkit-appearance: none;
+			display: inline-block;
+			height: 50px;
+			margin: 0;
+			padding: 0em 1em;
+			background: none;
+			width: 93%;
+			border: none;
+			letter-spacing: 0.05em;
+			line-height: 50px;
+			font-size: 1em;
+			color: #fff;
+			outline: none;
+		}
+		
 		#subscribe input[type="submit"],
 		#subscribe input[type="reset"],
 		#subscribe input[type="button"],
@@ -2299,12 +2324,31 @@ input, select, textarea {
 			line-height: 44px;
 			margin: 3px;
 		}
+		
+		#resetPwF input[type="submit"],
+		#resetPwF input[type="reset"],
+		#resetPwF input[type="button"],
+		#resetPwF button,
+		#resetPwF.button {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 44px;
+			padding-top: 0;
+			padding-bottom: 0;
+			line-height: 44px;
+			margin: 3px;
+		}
 
 		#subscribe ::-webkit-input-placeholder, #subscribe :-moz-placeholder, #subscribe ::-moz-placeholder, #subscribe :-ms-input-placeholder {
 			color: #ccc !important;
 		}
 		
 		#subscribe2 ::-webkit-input-placeholder, #subscribe2 :-moz-placeholder, #subscribe2 ::-moz-placeholder, #subscribe2 :-ms-input-placeholder {
+			color: #ccc !important;
+		}
+		
+		#resetPwF ::-webkit-input-placeholder, #resetPwF :-moz-placeholder, #resetPwF ::-moz-placeholder, #resetPwF :-ms-input-placeholder {
 			color: #ccc !important;
 		}
 
@@ -2901,11 +2945,9 @@ input, select, textarea {
 				}
 
 		/* Newsletter */
-			div#signuptext{
+			div#membertext{
 				width: 80%;
 			}
-			
-			
 
 
 			#subscribe {
@@ -2916,6 +2958,9 @@ input, select, textarea {
 				width: 49%;
 			}
 			
+			#resetPwF {
+				width: 80%;
+			}
 
 		/* Slider */
 
@@ -3156,7 +3201,7 @@ input, select, textarea {
 				}
 
 		/* Newsletter */
-			div#signuptext{
+			div#membertext{
 				width: 100%;
 			}
 			
@@ -3170,7 +3215,11 @@ input, select, textarea {
 			}
 			
 			#subscribe2 {
-				width: 49%%;
+				width: 49%;
+			}
+			
+			#resetPwF {
+				width: 100%;
 			}
 
 				#subscribe input[type="submit"],
@@ -3187,6 +3236,15 @@ input, select, textarea {
 				#subscribe2 input[type="button"],
 				#subscribe2 button,
 				#subscribe2 .button {
+					width: auto;
+					padding: 0 1em 0 1em;
+				}
+				
+				#resetPwF input[type="submit"],
+				#resetPwF input[type="reset"],
+				#resetPwF input[type="button"],
+				#resetPwF button,
+				#subscribe3 .button {
 					width: auto;
 					padding: 0 1em 0 1em;
 				}
